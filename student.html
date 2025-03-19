@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details | 学生详情</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 详情页样式 */
+        .main-container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 80px auto 10px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .back-link-container {
+            width: 100%;
+            text-align: right;
+            margin-bottom: 2px;
+        }
+        .back-link {
+            display: inline-block; /* 使链接可以正确对齐 */
+            color: #718096;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0px 16px;
+            border-radius: 4px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #4299e1;
+            background-color: rgba(66, 153, 225, 0.1); /* 悬停时添加背景色 */
+        }
+
+        .student-detail {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            background: #fff;
+            padding: 2px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .student-photo-section {
+            text-align: center;
+            padding-left: 50px;
+        }
+
+        .student-photo {
+            width: 180px;
+            height: 240px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .student-basic-info {
+            text-align: center;
+        }
+
+        .student-name {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .student-category {
+            font-size: 1rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        .student-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-section {
+            background: #f8fafc;
+            padding: 8px 50px 8px 20px;
+            border-radius: 8px;
+        }
+
+        .detail-section h2 {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .detail-section p {
+            font-size: 1rem;
+            color: #2d3748;
+            line-height: 1.6;
+            margin: 8px 15px;
+        }
+        /* .detail-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        } */
+        /* .detail-section .achievement p {
+            color: #2d3748;
+            padding: 2px 0;
+            line-height: 1.5;
+            display: flex;
+        } */
+        .detail-section .achievement {
+            font-size: 1rem;
+            color: #2d3748;
+            line-height: 1.5;
+            margin: 8px 15px;
+            position: relative;
+            padding-left: 1.2em;
+            vertical-align:middle;
+        }
+        .detail-section .achievement::before {
+            content: "•";
+            display: inline-block;
+            color: #4dabf7;
+            width: 1em;
+            background-size: contain;
+        }
+
+        .detail-section .student-destination {
+            color: #2c7a47;
+        }
+
+        .detail-section li::before {
+            content: "•";
+            color: #4299e1;
+            margin-right: 12px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 0 5px;
+                width: 98%;
+            }
+            .student-photo-section {
+                padding-left: 0px;
+            }
+            .student-detail {
+                grid-template-columns: 1fr;
+                gap: 0px;
+            }
+            .student-photo {
+                width: 120px;
+                height: 160px;
+                margin-bottom: 2px;
+            }
+            .student-name {
+                font-size: 1.4rem;
+                line-height: 1.2;
+                margin-bottom: 2px;
+            }
+            .detail-section {
+                padding: 2px;
+            }
+            .detail-section h2 {
+                margin-bottom: 2px;
+            }
+            .detail-section p {
+                font-size: 0.95rem;
+                margin: 2px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .student-photo {
+                width: 105px;
+                height: 140px;
+            }
+            .student-name {
+                font-size: 1.25rem;
+            }
+            .detail-section p {
+                font-size: 0.95rem;
+                margin: 2px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部栏 -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">ICLab测试页面</div>
+            <div class="menu-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="students.html" class="active">Students</a>
+                <a href="publications.html">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="back-link-container">
+            <a href="students.html" class="back-link">返回学生列表</a>
+        </div>
+        <!-- 学生详情内容将动态插入到这里 -->
+        <div id="student-detail-container"></div>
+    </div>
+
+    <!-- 底部栏 -->
+    <footer>
+        <p>© 2023 Intelligent Computing Lab. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 菜单交互
+        const menuIcon = document.querySelector('.menu-icon');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // 加载学生详情
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const studentId = urlParams.get('id');
+            const container = document.getElementById('student-detail-container');
+
+            fetch('students.json')
+                .then(response => response.json())
+                .then(data => {
+                    let targetStudent = null;
+                    // 查找目标学生
+                    for (const year of data.order_year) {
+                        const yearData = data.data[year];
+                        for (const category in yearData) {
+                            const students = yearData[category];
+                            if (Array.isArray(students)) {
+                                targetStudent = students.find(s => s.id === studentId);
+                                if (targetStudent) break;
+                            }
+                        }
+                        if (targetStudent) break;
+                    }
+
+                    if (targetStudent) {
+                        container.innerHTML = `
+                            <div class="student-detail">
+                                <div class="student-photo-section">
+                                    <img src="${targetStudent.photo}" alt="${targetStudent.name}" class="student-photo">
+                                    <div class="student-basic-info">
+                                        <div class="student-name">${targetStudent.name}</div>
+                                        <div class="student-category">${targetStudent.year}级 ${targetStudent.category}</div>
+                                    </div>
+                                </div>
+                                <div class="student-content">
+                                    <div class="detail-section">
+                                        <h2>研究方向</h2>
+                                        <p>${targetStudent.research}</p>
+                                    </div>
+                                    ${targetStudent.bio ? `
+                                    <div class="detail-section">
+                                        <h2>个人简介</h2>
+                                        <p>${targetStudent.bio}</p>
+                                    </div>` : ''}
+                                    ${targetStudent.achievements.length > 0 ? `
+                                    <div class="detail-section">
+                                        <h2>成果展示</h2>
+                                            ${targetStudent.achievements.map(a => `<p class='achievement'>${a}</p>`).join('')}
+                                    </div>` : ''}
+                                    ${targetStudent.wshow && targetStudent.wshow.length > 0 ? `
+                                    <div class="wshow-section">
+                                        ${targetStudent.wshow.map(item => `
+                                            <div class="detail-section">
+                                                <h2>${item.title}</h2>
+                                                <p>${item.content}</p>
+                                            </div>
+                                        `).join('')}
+                                    </div>` : ''}
+                                    ${targetStudent.destination ? `
+                                    <div class="detail-section">
+                                        <h2>毕业去向</h2>
+                                        <p class="student-destination">${targetStudent.destination}</p>
+                                    </div>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        container.innerHTML = `
+                            <div class="error-message">
+                                <h2>未找到该学生信息</h2>
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading student data:', error);
+                    container.innerHTML = `
+                        <div class="error-message">
+                            <h2>数据加载失败</h2>
+                            <p>请稍后重试</p>
+                        </div>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html>

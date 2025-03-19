@@ -1,0 +1,43 @@
+{
+    "order_year": ["2024", "2023", "2022"],
+    "show_paper_home": "true",
+    "papers": {
+        "2024": [
+            {
+                "title": "A<sup>2</sup>GSTran: Depth Map Super-Resolution via Asymmetric Attention With Guidance Selection",
+                "authors": "Yifan Zuo, Yaping Xu, Yifeng Zeng, Yuming Fang, Xiaoshui Huang, Jiebin Yan",
+                "venue": "IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 34, no. 6, pp. 4668-4681, 2024",
+                "paper_home": "#paper_abstract",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/10296875",
+                "code": "https://github.com/alex-cate/Depth_Map_Super-resolution_via_Asymmetric_Attention_with_Guidance_Selection"
+            },
+            {
+                "title": "GMF: General Multimodal Fusion Framework for Correspondence Outlier Rejection",
+                "authors": "Xiaoshui Huang, Wentao Qu, Yifan Zuo, Yuming Fang, Xiaowei Zhao",
+                "venue": "IEEE Robotics and Automation Letters (IEEE RAL), vol. 7, no. 4, pp. 12585-12592, 2022",
+                "paper_home": "",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9940574",
+                "code": "https://github.com/XiaoshuiHuang/GMF"
+            }
+        ],
+        "2023": [
+            {
+                "title": "Unsupervised Point Cloud Registration by Learning Unified Gaussian Mixture Models",
+                "authors": "Xiaoshui Huang, Sheng Li, Yifan Zuo, Yuming Fang, Jian Zhang, Xiaowei Zhao",
+                "venue": "IEEE Robotics and Automation Letters (IEEE RAL), vol. 7, no. 3, pp. 7028-7035, 2022",
+                "paper_home": "#paper_abstract",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9790333",
+                "code": ""
+            }
+        ],
+        "2022": [
+            {
+                "title": "MIG-Net: Multi-Scale Network Alternatively Guided by Intensity and Gradient Features for Depth Map Super-Resolution",
+                "authors": "Yifan Zuo, Hao Wang, Yuming Fang, Xiaoshui Huang, Xiwu Shang, Qiang Wu",
+                "venue": "IEEE Transactions on Multimedia (IEEE TMM), vol. 24, pp. 3506-3519, 2022",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9502009",
+                "code": "https://github.com/Yifan-Zuo/MIG-net-gradient_guided_depth_enhancement"
+            }
+        ]
+    }
+}

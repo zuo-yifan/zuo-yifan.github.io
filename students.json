@@ -1,0 +1,121 @@
+{
+    "order_year": ["2024", "2023", "2022"],
+    "order_cate": ["PhD", "Master"],
+    "data": {
+        "2024": {
+            "PhD": [
+                {
+                    "id": "2024phd01",
+                    "name": "王小明",
+                    "photo": "shu.jpg",
+                    "year": "2021",
+                    "category": "博士生",
+                    "research": "计算机视觉与模式识别",
+                    "bio": "这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介这是我的个人简介...",
+                    "achievements": [
+                        "Yifan Zuo, <b>Wenhao Yao</b>, Yifeng Zeng, Jiacheng Xie, Yuming Fang, Yan Huang, Wenhui Jiang, “CFNet: conditional filter learning with dynamic noise estimation for real image denoising,” Knowledge-Based Systems (KBS 2024)",
+                        "Yifan Zuo, <b>Wenhao Yao</b>, Yuqi Hu, Yuming Fang, Wei Liu, Yuxin Peng, “Image Super-Resolution via Efficient Transformer Embedding Frequency Decomposition With Restart,” IEEE Transactions on Image Processing (IEEE TIP 2024)",
+                        "国家奖学金获得者<b>Xiaoming Wang</b>国家奖学金获得者（2022）"
+                    ],
+                    "destination": "亚洲某某研究院（2023.03-2023.09）",
+                    "wshow": [
+                        {
+                            "title": "个人兴趣",
+                            "content": "我喜欢阅读科幻小说和打篮球。"
+                        },
+                        {
+                            "title": "代表性论文",
+                            "content": "1. 论文A: 《基于深度学习的图像分类方法》<br>2. 论文B: 《自然语言处理中的语义分析》"
+                        },
+                        {
+                            "title": "获奖经历",
+                            "content": "2022年获得XX奖学金。"
+                        }
+                    ]
+                }
+            ],
+            "AcademicMaster": [],
+            "ProfessionalMaster": []
+        },
+        "2023": {
+            "PhD": [
+                {
+                    "id": "2022phd01",
+                    "name": "张三",
+                    "photo": "shu.jpg",
+                    "category": "2019级 博士生",
+                    "research": "自然语言处理",
+                    "achievements": [
+                        "发表ACL 2022论文1篇（一作）"
+                    ],
+                    "destination": "智能制造研究院"
+                }
+            ],
+            "AcademicMaster": [
+                {
+                    "id": "2022phd02",
+                    "name": "李学硕",
+                    "photo": "shu.jpg",
+                    "category": "2024级 学硕",
+                    "research": "机器学习计算机视觉与模式识别、自然语言处理",
+                    "achievements": [
+                        "发表ICML 2023论文1篇（二作）"
+                    ],
+                    "destination": "广东AI Lab"
+                },
+                {
+                    "id": "2022phd03",
+                    "name": "李学硕",
+                    "photo": "shu.jpg",
+                    "category": "2024级 学硕",
+                    "research": "机器学习",
+                    "achievements": [
+                        "发表ICML 2023论文1篇（二作）"
+                    ],
+                    "destination": ""
+                }
+            ],
+            "ProfessionalMaster": [
+                {
+                    "id": "2022phd04",
+                    "name": "张专硕1",
+                    "photo": "#professional1.jpg",
+                    "category": "2024级 专硕",
+                    "research": "数据挖掘",
+                    "achievements": [
+                        "发表KDD 2023论文1篇（三作）"
+                    ],
+                    "destination": "计算科技"
+                },
+                {
+                    "id": "2022phd05",
+                    "name": "张专硕2",
+                    "photo": "#professional2.jpg",
+                    "category": "2024级 专硕",
+                    "research": "自然语言处理",
+                    "achievements": [
+                        "发表ACL 2023论文1篇（四作）"
+                    ],
+                    "destination": "浙江某某"
+                }
+            ]
+        },
+        "2022": {
+            "ProfessionalMaster": [
+                {
+                    "id": "2023phd01",
+                    "name": "李晓红",
+                    "photo": "shu.jpg",
+                    "category": "2024级 专硕",
+                    "research": "图像超分辨率重建",
+                    "bio": "",
+                    "achievements": [
+                        "ICIP 2023 论文共同作者",
+                        "发明专利：一种基于深度学习的图像增强方法（受理中）"
+                    ],
+                    "destination": "计算人工智能实验室"
+                }
+            ]
+        }
+    }
+}
