@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yifan Zuo - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 主容器 */
+        .main-container {
+            flex: 1;
+            width: 90%;
+            max-width: 1400px;
+            margin: 80px auto 0;
+            padding: 0 2%;
+            display: grid;
+            grid-template-columns: 1fr 330px; /* 正文在左，侧边栏在右 */
+            gap: 20px;
+        }
+
+        /* ***** 侧边栏 ***** */
+        .sidebar {
+            background: var(--sidebar-bg);
+            border-radius: 8px;
+            padding: 20px;
+            align-self: start;
+            position: sticky;
+            top: 80px;
+            min-width: 320px;  /* 限制最小宽度 */
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-direction: column;
+            text-align: center;
+        }
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #eee;
+            flex-shrink: 0;
+        }
+        .name-container {
+            flex: 1;
+        }
+        .name-en {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 0.1rem;
+        }
+        .name-en2 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 0.1rem;
+        }
+        .name-zh {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .sidebar-info {
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .sidebar-info p {
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+        .email-info {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin: 15px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .email-info::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+        }
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            /* width: 160px; */
+            gap: 10px;
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 4px 12px;
+            font-size: 0.83rem; /* 链接字体缩小 */
+            font-weight: 600;
+            border-radius: 20px;
+            /* background: rgba(255,255,255,0.8); */
+            background: var(--sidebar-bg);
+            transition: all 0.2s;
+        }
+        .contact-link:hover {
+            background: #eee;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .contact-link svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--secondary-color);
+        }
+
+        /* ***** 正文内容 ***** */
+        #welcome-section {
+            scroll-margin-top: 80px;  /* 根据导航栏高度调整 */
+        }
+        #publications {
+            scroll-margin-top: 65px;  /* 根据导航栏高度调整 */
+        }
+        .main-content {
+            max-width: 1070px;
+            padding-bottom: 10px;
+            min-width: 320px;  /* 限制最小宽度 */
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            padding-left: 1.5em; /* 增加左侧间距 */
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            border-top: 2px solid #ddd;
+            background: linear-gradient(to right, transparent, #eee, transparent) top no-repeat;
+        }
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            margin-top: 0.25em;
+            width: 1em; /* 图标宽度 */
+            height: 1em; /* 图标高度 */
+            /* background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="40" fill="%232980b9" /><ellipse cx="50" cy="50" rx="35" ry="20" transform="rotate(45 50 50)" fill="none" stroke="%23ffffff" stroke-width="2" /><circle cx="85" cy="50" r="5" fill="%23ffffff" /><ellipse cx="50" cy="50" rx="35" ry="20" transform="rotate(135 50 50)" fill="none" stroke="%23ffffff" stroke-width="2" /><circle cx="15" cy="50" r="5" fill="%23ffffff" /><ellipse cx="50" cy="50" rx="35" ry="20" transform="rotate(-45 50 50)" fill="none" stroke="%23ffffff" stroke-width="2" /><circle cx="50" cy="85" r="5" fill="%23ffffff" /></svg>') no-repeat center; */
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><defs><radialGradient id="gradient1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="%234a5568" /><stop offset="100%" stop-color="%23f0f2f5" /></radialGradient></defs><circle cx="50" cy="50" r="30" fill="url(%23gradient1)" /><ellipse cx="50" cy="50" rx="40" ry="20" transform="rotate(45 50 50)" fill="none" stroke="%23afafaf" stroke-width="2" /><circle cx="90" cy="50" r="4" fill="%23afafaf" /><ellipse cx="50" cy="50" rx="40" ry="20" transform="rotate(135 50 50)" fill="none" stroke="%23afafaf" stroke-width="2" /><circle cx="10" cy="50" r="4" fill="%23afafaf" /><ellipse cx="50" cy="50" rx="40" ry="20" transform="rotate(-45 50 50)" fill="none" stroke="%23afafaf" stroke-width="2" /><circle cx="50" cy="90" r="4" fill="%23afafaf" /></svg>') no-repeat center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        /* Welcome部分 */
+        .welcome-section {
+            /* background: var(--sidebar-bg); */
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            /* margin-left: 1em; */
+        }
+        .welcome-section h1 {
+            font-size: 1.6rem; /* 标题字体缩小 */
+            color: var(--primary-color);
+            padding-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            padding-left: 0em;
+            position: relative;
+        }
+        .welcome-section h2 {
+            border: none;
+            /* background: none; */
+            padding-left: 0.5em;        /* 保持左内边距，与图标对齐 */
+            margin-bottom: 1rem;        /* 调整下边距 */
+        }
+        .welcome-section h2::before {
+            display: none;
+        }
+        .welcome-section p, .icon-list li {
+            font-size: 1rem;
+            text-align: justify;
+            line-height: 1.5;
+            color: var(--text-dark);
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            margin-left: 1em;
+            margin-bottom: 0.5em;
+        }
+        .icon-list .li-icon-circle {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5em;
+            line-height: 1.2;
+        }
+        .icon-list .li-icon-circle::before {
+            content: '';
+            flex-shrink: 0;
+            margin-left: 0.5em;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .icon-list .li-research {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5em;
+            margin-bottom: 0.8em;
+            line-height: 1;
+        }
+        .icon-list .li-research::before {
+            content: '';
+            flex-shrink: 0;
+            padding-left: 0.5em;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Cpath d='M21.707 20.293l-3.4-3.4A7.93 7.93 0 0 0 20 12c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.65 0 3.19-.5 4.47-1.35l3.4 3.4 1.41-1.41zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z'/%3E%3C/svg%3E");
+            /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23718096'%3E%3Cpath d='M12 15.5A3.5 3.5 0 0 1 8.5 12c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5zm0-5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm8.5 2h-1.86c-.17-.68-.52-1.29-1-1.78l1.32-1.32c.45-.45.45-1.18 0-1.63l-1.41-1.41c-.45-.45-1.18-.45-1.63 0l-1.32 1.32c-.49-.48-1.1-.83-1.78-1V3.5c0-.83-.67-1.5-1.5-1.5h-2c-.83 0-1.5.67-1.5 1.5v1.86c-.68.17-1.29.52-1.78 1L6.09 5.45c-.45-.45-1.18-.45-1.63 0L3.05 6.86c-.45.45-.45 1.18 0 1.63l1.32 1.32c-.48.49-.83 1.1-1 1.78H1.5c-.83 0-1.5.67-1.5 1.5v2c0 .83.67 1.5 1.5 1.5h1.86c.17.68.52 1.29 1 1.78l-1.32 1.32c-.45.45-.45 1.18 0 1.63l1.41 1.41c.45.45 1.18.45 1.63 0l1.32-1.32c.49.48 1.1.83 1.78 1v1.86c0 .83.67 1.5 1.5 1.5h2c.83 0 1.5-.67 1.5-1.5v-1.86c.68-.17 1.29-.52 1.78-1l1.32 1.32c.45.45 1.18.45 1.63 0l1.41-1.41c.45-.45.45-1.18 0-1.63l-1.32-1.32c.48-.49.83-1.1 1-1.78h1.86c.83 0 1.5-.67 1.5-1.5v-2c0-.83-.67-1.5-1.5-1.5z'/%3E%3C/svg%3E"); */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .icon-star {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5em;
+        }
+        .icon-star::before {
+            content: '';
+            flex-shrink: 0;
+            margin-left: 0.5em;
+            width: 16px;
+            height: 16px;
+            margin-top: 0.2em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .left-free {
+            margin-left: 3em;;
+        }
+        .left-free .icon-arrow {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5em;
+            line-height: 1.5;
+            color: #2D3748;
+        }
+        .left-free .icon-arrow::before {
+            content: '';
+            flex-shrink: 0;
+            margin-left: 0.5em;
+            margin-top: 0.2em;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        /* 论文样式 */
+        .paper-list {
+            border-top: 1px solid #eee;
+        }
+        .year-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: underline; /* 设置下划线 */
+            text-decoration-color: var(--primary-color);
+            margin-top: 0.3rem;
+            padding-left: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .year-label::before { /* 使用 ::before 插入日历图标 */
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234a5568'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-right: 0.2rem;
+        }
+        .year-label:first-child { /* 第一个年份标签不需要额外的上边距 */
+            margin-top: 0;
+        }
+        /* 论文容器 */
+        .paper-item {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;  /* 允许换行 */
+            text-align: justify;
+            padding: 0.7rem 0.5rem 0.7rem 1.2rem;
+            border-bottom: 2px solid #eee;
+            margin-left: 1em;
+        }
+        /* 图片容器 - 宽屏时在论文信息的左边 */
+        .paper-image {
+            flex-shrink: 0;
+            width: 200px;
+            align-self: center;  /* 垂直居中 */
+        }
+        .paper-image img {
+            width: 100%;
+            height: auto;  /* 高度自适应，保持比例 */
+            display: block;
+            border-radius: 2px;
+        }
+        /* 论文信息 - 占据剩余空间 */
+        .paper-info {
+            flex: 1;
+            min-width: 255px;  /* 限制最小宽度 */
+        }
+        .publication-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.1rem;
+            line-height: 1.2;
+        }
+        .publication-authors {
+            font-size: 0.87rem;
+            color: #555555;
+            font-style: italic;
+        }
+        .publication-venue {
+            font-size: 0.83rem;
+            color: #5a6d80;
+            font-weight: 500;
+        }
+        .paper-links {
+            display: flex;
+            gap: 12px;
+        }
+        .paper-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.83rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            margin-right: 8px;
+            border-radius: 3px;
+            transition: background 0.2s;
+            background: rgba(100, 150, 192, 0.1);
+        }
+        .paper-links a::before {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .paper-links a:hover {
+            background: rgba(41,128,185,0.2);
+        }
+        .paper-links a.paperbutton::before { /* 论文图标 */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm8-11V4l5 5h-5z'/%3E%3C/svg%3E");
+        }
+        .paper-links a.codebutton::before { /* github代码图标 */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Cpath d='M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z'/%3E%3C/svg%3E");
+        }
+        .paper-links a.pdfbutton::before { /* pdf图标 */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232980b9' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Ctext x='4.5' y='18' font-size='7.5' fill='%232980b9' stroke='none' font-weight='bold'%3EPDF%3C/text%3E%3C/svg%3E");
+        }
+        .paper-links a.suppbutton::before { /* supplement图标 */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232980b9'%3E%3Cpath d='M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z'/%3E%3C/svg%3E");
+        }
+
+        /* 响应式优化 */
+        @media (max-width: 1024px) {
+            .main-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .sidebar {
+                position: static;
+                order: -1;
+                width: 100%;
+            }
+            .email-info {
+                margin-top: -15px;
+            }
+            .main-content {
+                width: 100%;
+            }
+            .contact-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .contact-link {
+                /* padding: 4px 10px; */
+                font-size: 0.8rem; /* 链接字体缩小 */
+                font-weight: 600;
+                margin-left: 3px;
+                margin-right: 3px;
+                margin-bottom: 3px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                width: 98%;
+            }
+            .welcome-section {
+                padding: 0.1rem;
+            }
+            .welcome-section h1 {
+                font-size: 1.3rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .main-container {
+                padding: 0 10px;
+            }
+            .year-label {
+                font-size: 1rem;
+                margin-top: 0.3rem;
+                margin-bottom: 0.1rem;
+            }
+            .sidebar {
+                padding: 10px;
+            }
+        }
+
+        /* 窄屏时：论文左边显示的图片移到下方 */
+        @media (max-width: 600px) {
+            .paper-item {
+                flex-direction: column;
+            }
+            .paper-image {
+                width: 100%;
+                max-width: 250px;  /* 限制最大宽度，避免太大 */
+                align-self: center;
+                margin-top: 0.5rem;
+                order: 2;  /* 图片在信息下方 */
+            }
+            .paper-info {
+                order: 1;  /* 论文信息在上方 */
+            }
+            .paper-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部栏 -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Yifan Zuo</div>
+            <div class="menu-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </div>
+            <div class="nav-menu">
+                <a href="#welcome-section" class="active">Home</a>
+                <a href="#publications">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- 正文内容 -->
+        <div class="main-content">
+            <div class="welcome-section" id="welcome-section">
+                <h1>About Me</h1>
+                <p>I am currently working as an Associate Professor, Ph.D. Supervisor, and Vice Dean of the School of Computing and Artificial Intelligence at Jiangxi University of Finance and Economics. Focusing on the development trends of high-fidelity and three-dimensional visual information systems, my main academic contributions are in areas such as <b>single-domain image enhancement, cross-domain image enhancement, and multi-view point cloud registration</b>. I have published over 90 academic papers, including more than <b>30 in ACM/IEEE Transactions journals and Top conferences</b>.</p>
+
+                <section id="research">
+                    <h2>Research Interests</h2>
+                    <ul class="icon-list">
+                        <li class="li-research"><span>Depth Map Enhancement | 深度图增强</span></li>
+                        <li class="li-research"><span>Image Super-Resolution | 图像超分辨率重建</span></li>
+                        <li class="li-research"><span>Image Denoising | 图像去噪</span></li>
+                        <li class="li-research"><span>Depth Estimation | 深度估计</span></li>
+                        <li class="li-research"><span>Point Cloud Registration | 点云配准</span></li>
+                        <li class="li-research"><span>AI-Driven Medical Research | AI驱动的医学研究</span></li>
+                    </ul>
+                </section>
+                <h2>Join Us</h2>
+                <p class="icon-star"><span>I am seeking highly motivated students to join my team. I typically recruit <b>1 PhD student</b> and <b>5 master’s students</b> each year. If you have a strong interest in <b>computer vision</b> and <b>AI for Sciences</b>, along with curiosity and self-motivation, you are very welcome to apply to <b>join our team</b>. Our team is well-equipped with abundant computing resources to support your research.</span></p>
+                <ul class="left-free">
+                    <li class="icon-arrow"><span>To apply, please send your resume and a brief description of your research interests to <i><a href="mailto:kenny0410@126.com" style="font-weight: bold; text-decoration: none; color: #4DABF7;">kenny0410@126.com</a></i></span></li>
+                </ul>
+            </div>
+
+            <section id="publications">
+                <h2>Publications</h2> <!-- 论文信息从文件中获取 -->
+                <div class="paper-list" id="paper-container"></div>
+                <!-- <div class="paper-list">
+                    <div class="paper-item">
+                        <div class="publication-title"></div>
+                        <div class="publication-authors"></div>
+                        <div class="publication-venue"</div>
+                        <div class="paper-links">
+                            <a href="#paper">Paper</a>
+                            <a href="#code">Code</a>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+
+        </div>
+
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <img src="img/zuo.png" class="profile-img" loading="lazy">
+                <div class="name-container">
+                    <div class="name-en">Yifan Zuo</div>
+                    <!-- <div class="name-zh"></div> -->
+                    <div class="name-en2">Associate Professor, Ph.D. Supervisor</div>
+                </div>
+            </div>
+            <div class="sidebar-info">
+                <p style="font-size: 0.9rem; font-weight: 700; color: #4a5568; margin: 0.3rem 0;"><!-- #1a202c -->
+                    <a href="https://www.jxufe.edu.cn" target="_blank" rel="noopener noreferrer" 
+                      style="text-decoration: none; color: inherit;">Jiangxi University of Finance and Economics</a></p>
+                <p style="font-size: 0.85rem; font-weight: 500; color: #4a5568; margin: 0.2rem 0;">
+                    <a href="https://cai.jxufe.edu.cn/" target="_blank" rel="noopener noreferrer" 
+                      style="text-decoration: none; color: inherit;">School of Computing and Artificial Intelligence</a></p>
+            </div>
+            <div class="email-info">
+                <span><a href="mailto:kenny0410@126.com" style="text-decoration: none; color: inherit;">kenny0410@126.com</a></span>
+            </div>
+            <div class="contact-links">
+                <a href="https://scholar.google.com/citations?user=U7EWrAEAAAAJ&hl=zh-CN" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span>Google Scholar</span>
+                </a>
+                <a href="http://cta.jxufe.edu.cn/home/teacherInfo/detail?fid=109051&uid=86715628" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12,2 2,9 22,9" />
+                        <rect x="3" y="9" width="18" height="11" />
+                        <rect x="6" y="12" width="2" height="8" fill="white" />
+                        <rect x="11" y="12" width="2" height="8" fill="white" />
+                        <rect x="16" y="12" width="2" height="8" fill="white" />
+                    </svg>
+                    <span>My Homepage (JUFE)</span>
+                </a>
+                <!-- <a href="#" class="contact-link">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" class="contact-link">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.547 1.376.203 2.394.1 2.646.64.698 1.026 1.591 1.026 2.682 0 3.842-2.337 4.687-4.565 4.929.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部栏 -->
+    <footer>
+        <p>© 2026 Zuo's Research Group. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 菜单交互
+        const menuIcon = document.querySelector('.menu-icon');
+        const navMenu = document.querySelector('.nav-menu');
+        // 论文信息获取 存储于文件json/papers.json
+        menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('json/papers.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('paper-container');
+
+                    data.order_year.forEach(year => {
+                        const papers = data.papers[year];
+                        const yearLabel = document.createElement('div');
+                        yearLabel.className = 'year-label';
+                        yearLabel.textContent = year;
+                        container.appendChild(yearLabel);
+
+                        papers.forEach(paper => {
+                            const paperItem = document.createElement('div');
+                            paperItem.className = 'paper-item';
+
+                            // 添加图片（如果有）
+                            if (paper.image) {
+                                const imageContainer = document.createElement('div');
+                                imageContainer.className = 'paper-image';
+                                const img = document.createElement('img');
+                                img.src = paper.image;
+                                img.alt = paper.title;
+                                img.loading = 'lazy'; // 懒加载
+                                img.onerror = () => { // 图片加载失败时的处理
+                                    imageContainer.style.display = 'none';
+                                };
+                                imageContainer.appendChild(img);
+                                paperItem.appendChild(imageContainer);
+                            }
+
+                            // 论文信息容器
+                            const infoContainer = document.createElement('div');
+                            infoContainer.className = 'paper-info';
+                            // 论文标题
+                            const title = document.createElement('div');
+                            title.className = 'publication-title';
+                            title.innerHTML = paper.title;
+                            infoContainer.appendChild(title);
+                            // 论文作者
+                            const authors = document.createElement('div');
+                            authors.className = 'publication-authors';
+                            authors.innerHTML = paper.authors;
+                            infoContainer.appendChild(authors);
+                            // 期刊信息
+                            const venue = document.createElement('div');
+                            venue.className = 'publication-venue';
+                            venue.textContent = paper.venue;
+                            infoContainer.appendChild(venue);
+                            // 论文链接
+                            const links = document.createElement('div');
+                            links.className = 'paper-links';
+
+                            if (paper.paper) { // 论文主页链接
+                                const paperLink = document.createElement('a');
+                                paperLink.href = paper.paper;
+                                paperLink.textContent = 'Paper';
+                                paperLink.className = 'paperbutton';
+                                paperLink.setAttribute('target', '_blank');
+                                paperLink.setAttribute('rel', 'noopener noreferrer');
+                                links.appendChild(paperLink);
+                            }
+                            // if (paper.pdf && !paper.pdf.startsWith('#')) { // PDF链接
+                            //     const pdfLink = document.createElement('a');
+                            //     pdfLink.href = paper.pdf;
+                            //     pdfLink.textContent = 'PDF';
+                            //     pdfLink.className = 'pdfbutton';
+                            //     pdfLink.setAttribute('target', '_blank');
+                            //     pdfLink.setAttribute('rel', 'noopener noreferrer');
+                            //     links.appendChild(pdfLink);
+                            // }
+                            if (paper.code && !paper.code.startsWith('#')) { // 代码链接
+                                const codeLink = document.createElement('a');
+                                codeLink.href = paper.code;
+                                codeLink.textContent = 'Code';
+                                codeLink.className = 'codebutton';
+                                codeLink.setAttribute('target', '_blank');
+                                codeLink.setAttribute('rel', 'noopener noreferrer');
+                                links.appendChild(codeLink);
+                            }
+                            if (paper.supplement && !paper.supplement.startsWith('#')) { // 补充链接
+                                const supplementLink = document.createElement('a');
+                                supplementLink.href = paper.supplement;
+                                supplementLink.textContent = 'Supp';
+                                supplementLink.className = 'suppbutton';
+                                supplementLink.setAttribute('target', '_blank');
+                                supplementLink.setAttribute('rel', 'noopener noreferrer');
+                                links.appendChild(supplementLink);
+                            }
+
+                            infoContainer.appendChild(links);
+                            paperItem.appendChild(infoContainer);
+                            container.appendChild(paperItem);
+                        });
+                    });
+                })
+                .catch(error => console.error('Error loading paper data:', error));
+        });
+    </script>
+    <script> // 顶部菜单下划线
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            // 获取所有区域
+            const sections = [
+                { element: document.getElementById('welcome-section'), linkId: '#welcome-section' },
+                { element: document.getElementById('publications'), linkId: '#publications' }
+            ].filter(s => s.element);
+            
+            // 滚动监听
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const scrollPosition = window.scrollY + 80;
+                // 倒序查找当前所在区域
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    const top = section.element.offsetTop;
+                    const bottom = top + section.element.offsetHeight;
+                    
+                    if (scrollPosition >= top && scrollPosition < bottom) {
+                        current = section.linkId;
+                        break;
+                    }
+                }
+                // 如果不在任何区域（比如在顶部），默认选中 Home
+                if (!current && scrollPosition < (sections[0]?.element.offsetTop || 0) + 100) {
+                    current = '#welcome-section';
+                }
+                // 更新 active 状态
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // 触发一次滚动事件，初始化状态
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>

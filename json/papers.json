@@ -1,0 +1,148 @@
+{
+    "order_year": ["2026", "2025", "2024", "2023", "2022"],
+    "show_pdf": "false",
+    "papers": {
+        "Template_Year": [
+            {
+                "title": "",
+                "authors": "",
+                "venue": "",
+                "paper": "",
+                "pdf": "",
+                "code": "",
+                "supplement": "",
+                "image": ""
+            },
+            {
+                "title": "",
+                "authors": "",
+                "venue": "",
+                "paper": "",
+                "code": "",
+                "image": ""
+            }
+        ],
+        "2026": [
+            {
+                "title": "PanFoMa: A Lightweight Foundation Model and Benchmark for Pan-Cancer",
+                "authors": "Xiaoshui Huang, Tianlin Zhu, Yifan Zuo, Xue Xia, Zonghan Wu, Jiebin Yan, Dingli Hua, Zongyi Xu, Yuming Fang, Jian Zhang",
+                "venue": "in Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), vol. 40, no. 1, pp. 453-461, Mar. 2026",
+                "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/37008",
+                "code": "",
+                "image": "img/paper_img/2026_PanFoMa.png"
+            }
+        ],
+        "2025": [
+            {
+                "title": "Dynamic 3D Gaussian Reconstruction with Specular Reflection",
+                "authors": "Mingyang Zhao, Yuanzhi Xu, Yifan Zuo, Xiaoshui Huang, Qiang Chen, Yuming Fang",
+                "venue": "IEEE International Conference on Image Processing (IEEE ICIP), pp. 1085-1090, 2025",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/11084729",
+                "code": "",
+                "image": "img/paper_img/2025_3DGS.jpg"
+            },
+            {
+                "title": "Learning Guided Implicit Depth Function With Scale-Aware Feature Fusion",
+                "authors": "Yifan Zuo, Yuqi Hu, Yaping Xu, Zhi Wang, Yuming Fang, Jiebin Yan, Wenhui Jiang, Yuxin Peng, Yan Huang",
+                "venue": "IEEE Transactions on Image Processing (IEEE TIP), vol. 34, pp. 3309-3322, 2025",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/11023076",
+                "code": "https://github.com/NaNRan13/GIDF",
+                "image": "img/paper_img/2025_GIDF.png"
+            },
+            {
+                "title": "PSReg: Prior-guided Sparse Mixture of Experts for Point Cloud Registration",
+                "authors": "Xiaoshui Huang, Zhou Huang, Yifan Zuo, Yongshun Gong, Chengdong Zhang, Deyang Liu, Yuming Fang",
+                "venue": "in Proceedings of AAAI Conference on Artificial Intelligence (AAAI), vol. 39, no. 4, pp. 3788-3796, Apr. 2025",
+                "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/32395",
+                "code": "",
+                "image": "img/paper_img/2025_PSReg.png"
+            }
+        ],
+        "2024": [
+            {
+                "title": "Image Super-Resolution via Efficient Transformer Embedding Frequency Decomposition With Restart",
+                "authors": "Yifan Zuo, Wenhao Yao, Yuqi Hu, Yuming Fang, Wei Liu, Yuxin Peng",
+                "venue": "IEEE Transactions on Image Processing (IEEE TIP), vol. 33, pp. 4670-4685, 2024",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/10643469",
+                "code": "https://github.com/catnip1029/FDRNet",
+                "image": "img/paper_img/2024_FDRNet.png"
+            },
+            {
+                "title": "Learning content-aware feature fusion for guided depth map super-resolution",
+                "authors": "Yifan Zuo, Hao Wang, Yaping Xu, Huimin Huang, Xiaoshui Huang, Xue Xia, Yuming Fang",
+                "venue": "Signal Processing: Image Communication (SPIC), vol. 126, pp. 117140, August 2024",
+                "paper": "https://www.sciencedirect.com/science/article/abs/pii/S0923596524000419",
+                "code": "https://github.com/alex-cate/JTFNet",
+                "image": "img/paper_img/2024_JTFNet.png"
+            },
+            {
+                "title": "Frozen CLIP Transformer Is an Efficient Point Cloud Encoder",
+                "authors": "Xiaoshui Huang, Zhou Huang, Sheng Li, Wentao Qu, Tong He, Yuenan Hou, Yifan Zuo, Wanli Ouyang",
+                "venue": "in Proceedings of AAAI Conference on Artificial Intelligence (AAAI), vol. 38, no. 3, pp. 2382-2390, Mar. 2024",
+                "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/28013",
+                "code": "https://github.com/XiaoshuiHuang/EPCL",
+                "image": "img/paper_img/2024_EPCL.png"
+            },
+            {
+                "title": "CFNet: conditional filter learning with dynamic noise estimation for real image denoising",
+                "authors": "Yifan Zuo, Wenhao Yao, Yifeng Zeng, Jiacheng Xie, Yuming Fang, Yan Huang, Wenhui Jiang",
+                "venue": "Knowledge-Based Systems (KBS), vol. 284, pp. 111320, 2024",
+                "paper": "https://www.sciencedirect.com/science/article/abs/pii/S0950705123010687",
+                "code": "https://github.com/WenhaoYao/CFNet",
+                "image": "img/paper_img/2024_CFNet.png"
+            },
+            {
+                "title": "A<sup>2</sup>GSTran: Depth Map Super-Resolution via Asymmetric Attention With Guidance Selection",
+                "authors": "Yifan Zuo, Yaping Xu, Yifeng Zeng, Yuming Fang, Xiaoshui Huang, Jiebin Yan",
+                "venue": "IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 34, no. 6, pp. 4668-4681, June 2024",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/10296875",
+                "code": "https://github.com/alex-cate/Depth_Map_Super-resolution_via_Asymmetric_Attention_with_Guidance_Selection",
+                "image": "img/paper_img/2024_A2GSTran.png"
+            }
+        ],
+        "2023": [
+            {
+                "title": "Gradient-Guided Single Image Super-Resolution Based on Joint Trilateral Feature Filtering",
+                "authors": "Yifan Zuo, Jiacheng Xie, Hao Wang, Yuming Fang, Deyang Liu, Wenying Wen",
+                "venue": "IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 33, no. 2, pp. 505-520, Feb. 2023",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9880477",
+                "code": "https://github.com/a239xjc/JTF-SISR",
+                "image": "img/paper_img/2023_JTFSISR.png"
+            }
+        ],
+        "2022": [
+            {
+                "title": "GMF: General Multimodal Fusion Framework for Correspondence Outlier Rejection",
+                "authors": "Xiaoshui Huang, Wentao Qu, Yifan Zuo, Yuming Fang, Xiaowei Zhao",
+                "venue": "IEEE Robotics and Automation Letters (IEEE RAL), vol. 7, no. 4, pp. 12585-12592, Oct. 2022",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9940574",
+                "code": "https://github.com/XiaoshuiHuang/GMF",
+                "image": "img/paper_img/2022_GMF.png"
+            },
+            {
+                "title": "IMFNet: Interpretable Multimodal Fusion for Point Cloud Registration",
+                "authors": "Xiaoshui Huang, Wentao Qu, Yifan Zuo, Yuming Fang, Xiaowei Zhao",
+                "venue": "IEEE Robotics and Automation Letters (IEEE RAL), vol. 7, no. 4, pp. 12323-12330, Oct. 2022",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9919364",
+                "code": "",
+                "image": "img/paper_img/2022_IMFNet.png"
+            },
+            {
+                "title": "Unsupervised Point Cloud Registration by Learning Unified Gaussian Mixture Models",
+                "authors": "Xiaoshui Huang, Sheng Li, Yifan Zuo, Yuming Fang, Jian Zhang, Xiaowei Zhao",
+                "venue": "IEEE Robotics and Automation Letters (IEEE RAL), vol. 7, no. 3, pp. 7028-7035, July 2022",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9790333",
+                "code": "",
+                "image": "img/paper_img/2022_UGMMPCR.png"
+            },
+            {
+                "title": "MIG-Net: Multi-Scale Network Alternatively Guided by Intensity and Gradient Features for Depth Map Super-Resolution",
+                "authors": "Yifan Zuo, Hao Wang, Yuming Fang, Xiaoshui Huang, Xiwu Shang, Qiang Wu",
+                "venue": "IEEE Transactions on Multimedia (IEEE TMM), vol. 24, pp. 3506-3519, 2022",
+                "paper": "https://ieeexplore.ieee.org/abstract/document/9502009",
+                "code": "https://github.com/Yifan-Zuo/MIG-net-gradient_guided_depth_enhancement",
+                "image": "img/paper_img/2022_MIGNet.png"
+            }
+        ]
+    }
+}
