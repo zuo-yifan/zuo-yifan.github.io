@@ -38,7 +38,7 @@
                 "authors": "Mingyang Zhao, Yuanzhi Xu, Yifan Zuo, Xiaoshui Huang, Qiang Chen, Yuming Fang",
                 "venue": "IEEE International Conference on Image Processing (IEEE ICIP), pp. 1085-1090, 2025",
                 "paper": "https://ieeexplore.ieee.org/abstract/document/11084729",
-                "code": "",
+                "code": "https://github.com/shepherdxyz/DynSpec-3DGS",
                 "image": "img/paper_img/2025_3DGS.jpg"
             },
             {
@@ -132,7 +132,7 @@
                 "authors": "Xiaoshui Huang, Sheng Li, Yifan Zuo, Yuming Fang, Jian Zhang, Xiaowei Zhao",
                 "venue": "IEEE Robotics and Automation Letters (IEEE RAL), vol. 7, no. 3, pp. 7028-7035, July 2022",
                 "paper": "https://ieeexplore.ieee.org/abstract/document/9790333",
-                "code": "",
+                "code": "https://github.com/XiaoshuiHuang/UGMMREG",
                 "image": "img/paper_img/2022_UGMMPCR.png"
             },
             {
