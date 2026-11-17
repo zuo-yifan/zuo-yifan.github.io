@@ -96,7 +96,7 @@
                 "authors": "Yifan Zuo, Yaping Xu, Yifeng Zeng, Yuming Fang, Xiaoshui Huang, Jiebin Yan",
                 "venue": "IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 34, no. 6, pp. 4668-4681, June 2024",
                 "paper": "https://ieeexplore.ieee.org/abstract/document/10296875",
-                "code": "https://github.com/alex-cate/Depth_Map_Super-resolution_via_Asymmetric_Attention_with_Guidance_Selection",
+                "code": "https://github.com/zuo-yifan/Depth_Map_Super-resolution_via_Asymmetric_Attention_with_Guidance_Selection-main",
                 "image": "img/paper_img/2024_A2GSTran.png"
             }
         ],
